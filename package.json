@@ -1,0 +1,29 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "enzyme": "^2.7.0",
+    "eslint": "^3.17.0",
+    "eslint-plugin-react": "^6.10.0",
+    "react-addons-test-utils": "^15.4.2",
+    "react-scripts": "0.8.4"
+  },
+  "dependencies": {
+    "howler": "2.0.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0"
+  },
+  "scripts": {
+    "start": "PORT=3001 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "coverage": "react-scripts test --env=jsdom --coverage",
+    "eject": "react-scripts eject",
+    "build-storybook": "build-storybook -s public",
+    "lint": "eslint src/"
+  }
+}
