@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import Gameinfo from '../containers/Gameinfo'
 import Goban from '../components/Goban'
 

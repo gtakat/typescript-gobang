@@ -1,3 +1,5 @@
+// import {createStore, combineReducers} from 'redux'
+import * as Redux from 'redux'
 import * as types from '../constants/ActionTypes'
 import judgement from '../Judgement'
 import sound from '../Sound'
@@ -15,8 +17,9 @@ const initialState = () => {
   }
 }
 
-const reducer = (state=null, action) => {
-  if (state == null) {
+const reducer = (state={}, action) => {
+  // if (state == null) {
+  if (Object.keys(state).length === 0) {
     return initialState()
   }
 
@@ -59,4 +62,5 @@ const reducer = (state=null, action) => {
   }
 }
 
-export default reducer
+// export default reducer
+export default Redux.createStore(reducer)
