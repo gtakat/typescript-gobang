@@ -112,7 +112,7 @@ module.exports = {
           /\.css$/,
           /\.json$/,
           /\.svg$/,
-          /\.tsx?$/
+          /\.(ts|tsx)$/
         ],
         loader: 'url',
         query: {
