@@ -1,8 +1,8 @@
 import * as React from 'react'
-import Header from './Header'
+import '../App.css'
 import Footer from './Footer'
 import Game from './Game'
-import '../App.css'
+import Header from './Header'
 
 const App = (): JSX.Element => (
   <div className="App">
@@ -12,4 +12,4 @@ const App = (): JSX.Element => (
   </div>
 )
 
-export default App;
+export default App

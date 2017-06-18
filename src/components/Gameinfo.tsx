@@ -1,13 +1,13 @@
 import * as React from 'react'
 import Goishi from './Goishi'
 
-export interface GameinfoProps {
+export interface IGameinfoProps {
   winner: string
   current: string
 }
 
-export class Gameinfo extends React.Component<GameinfoProps,{}> {
-  render(): JSX.Element {
+export class Gameinfo extends React.Component<IGameinfoProps, {}> {
+  public render(): JSX.Element {
     let informations: (JSX.Element|string) = ''
 
     if (this.props.winner) {

@@ -1,14 +1,14 @@
 import * as React from 'react'
 import Goishi from './Goishi'
 
-interface MasuProps {
-  squares: Array<string|null>[]
+interface IMasuProps {
+  squares: Array<Array<string|null>>
   row: number
   col: number
   hitGoishi: any
 }
 
-const Masu = (props: MasuProps): JSX.Element => {
+const Masu = (props: IMasuProps): JSX.Element => {
   const color: (string|null) = props.squares[props.row][props.col]
   const goishi: (JSX.Element|null) = color ? <Goishi color={color} /> : null
   return (

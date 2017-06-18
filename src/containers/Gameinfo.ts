@@ -1,10 +1,10 @@
 import { connect } from 'react-redux'
-import { Gameinfo, GameinfoProps } from '../components/Gameinfo'
+import { Gameinfo, IGameinfoProps } from '../components/Gameinfo'
 
-const mapStateToProps = (state: any): GameinfoProps => (
+const mapStateToProps = (state: any): IGameinfoProps => (
   {
     current: state.current,
-    winner: state.winner
+    winner: state.winner,
   }
 )
 
