@@ -9,10 +9,10 @@
             "single",
             "jsx-double"
         ],
-        // "semicolon": [
-        //     false,
-        //     "always"
-        // ]
+        "semicolon": [
+            false,
+            "always"
+        ]
     },
     "rules": {
         "quotemark": [
@@ -20,10 +20,10 @@
             "single",
             "jsx-double"
         ],
-        // "semicolon": [
-        //     false,
-        //     "always"
-        // ]
+        "semicolon": [
+            false,
+            "always"
+        ]
     },
     "rulesDirectory": []
 }

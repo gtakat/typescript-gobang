@@ -88,6 +88,11 @@ module.exports = {
         test: /\.(js|jsx)$/,
         loader: 'eslint',
         include: paths.appSrc,
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        loader: 'tslint',
+        include: paths.appSrc,
       }
     ],
     loaders: [
@@ -158,6 +163,7 @@ module.exports = {
       },
       {
         test: /\.(ts|tsx)$/,
+        include: paths.appSrc,
         loader: 'awesome-typescript-loader',
       }
     ]

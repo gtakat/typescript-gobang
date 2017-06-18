@@ -1,16 +1,13 @@
 import { connect } from 'react-redux'
-import Gameinfo from '../components/Gameinfo'
+import { Gameinfo, GameinfoProps } from '../components/Gameinfo'
 
-interface GameinfoState {
-  current: string
-  winner: string
-}
-
-const mapStateToProps = (state: any): GameinfoState => (
+const mapStateToProps = (state: any): GameinfoProps => (
   {
     current: state.current,
     winner: state.winner
   }
 )
 
-export default connect(mapStateToProps)(Gameinfo)
+const mapDispatchToProps = (dispatch: any): any => ({})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Gameinfo)

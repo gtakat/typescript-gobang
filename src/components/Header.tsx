@@ -1,6 +1,6 @@
-import React from 'react'
+import * as React from 'react'
 
-const Header = () => (
+const Header = (): JSX.Element => (
   <div className="App-header">
     <h2>TypeScript Gobang</h2>
   </div>

@@ -4,7 +4,7 @@ import Footer from './Footer'
 import Game from './Game'
 import '../App.css'
 
-const App = () => (
+const App = (): JSX.Element => (
   <div className="App">
     <Header />
     <Game />
@@ -12,4 +12,4 @@ const App = () => (
   </div>
 )
 
-export default App
+export default App;

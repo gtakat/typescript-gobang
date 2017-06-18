@@ -49,6 +49,7 @@
     "strip-ansi": "3.0.1",
     "style-loader": "0.13.1",
     "tslint": "^5.4.3",
+    "tslint-loader": "^3.5.3",
     "typescript": "^2.3.4",
     "url-loader": "0.5.7",
     "webpack": "1.14.0",
