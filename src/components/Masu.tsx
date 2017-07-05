@@ -1,14 +1,15 @@
 import * as React from 'react'
 import Goishi from './Goishi'
 
-interface IMasuProps {
+export interface IMasuProps {
   squares: Array<Array<string|null>>
+  key: string
   row: number
   col: number
   hitGoishi: any
 }
 
-const Masu = (props: IMasuProps): JSX.Element => {
+export const Masu = (props: IMasuProps|any): JSX.Element => {
   const color: (string|null) = props.squares[props.row][props.col]
   const goishi: (JSX.Element|null) = color ? <Goishi color={color} /> : null
   return (
@@ -19,5 +20,3 @@ const Masu = (props: IMasuProps): JSX.Element => {
     </div>
   )
 }
-
-export default Masu

@@ -1,12 +1,12 @@
 import { connect } from 'react-redux'
 import { hitGoishi } from '../actions'
-import Masu from '../components/Masu'
+import { IMasuProps, Masu } from '../components/Masu'
 
 interface IMasuDispacher {
   hitGoishi: (row: number, col: number) => (any)
 }
 
-const mapStateToProps = (state: any) => (state)
+const mapStateToProps = (state: IMasuProps) => (state)
 
 const mapDispatchToProps = (dispatch: any): IMasuDispacher => (
   {
