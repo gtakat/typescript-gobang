@@ -18,31 +18,7 @@ class Judgement {
     return true
   }
 
-  private existsGoishi(state: any, row: number, col: number): boolean {
-    return !!state.squares[row][col]
-  }
-
-  private validFirstHit(state: any, row: number, col: number): boolean {
-    if (state.step === 1) {
-      return (row === 9 && col === 9)
-    }
-    return true
-  }
-
-  private validSecondHit(state: any, row: number, col: number): boolean {
-    if (state.step === 2) {
-      const areas: any = {
-        8:  [8, 9, 10],
-        9:  [8, 10],
-        10: [8, 9, 10],
-      }
-
-      return areas[row] && areas[row].includes(col)
-    }
-    return true
-  }
-
-  private calculateWinner(squares: string[][], color: string, row: number, col: number): boolean {
+  public calculateWinner(squares: Array<Array<string|null>>, color: string, row: number, col: number): boolean {
     // horizontal and vertical line check
     let horizontalCount: number = 0
     let verticalCount: number = 0
@@ -128,6 +104,30 @@ class Judgement {
     }
 
     return false
+  }
+
+  private existsGoishi(state: any, row: number, col: number): boolean {
+    return !!state.squares[row][col]
+  }
+
+  private validFirstHit(state: any, row: number, col: number): boolean {
+    if (state.step === 1) {
+      return (row === 9 && col === 9)
+    }
+    return true
+  }
+
+  private validSecondHit(state: any, row: number, col: number): boolean {
+    if (state.step === 2) {
+      const areas: any = {
+        8:  [8, 9, 10],
+        9:  [8, 10],
+        10: [8, 9, 10],
+      }
+
+      return areas[row] && areas[row].includes(col)
+    }
+    return true
   }
 }
 

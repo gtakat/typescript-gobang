@@ -1,3 +1,11 @@
 import * as types from '../constants/ActionTypes'
 
-export const hitGoishi = (row: number, col: number) => ({type: types.HIT_GOISHI, row, col})
+export const hitGoishi = (row: number, col: number) => (
+  {
+    payload: {
+      col,
+      row,
+    },
+    type: types.HIT_GOISHI,
+  }
+)
