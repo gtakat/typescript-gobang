@@ -2,14 +2,10 @@
 import * as Redux from 'redux'
 import * as ReduxActions from 'redux-actions'
 import * as types from '../constants/ActionTypes'
+import { IAppActionData } from '../constants/ActionTypes'
 import { IAppState } from '../constants/StateTypes'
 import judgement from '../Judgement'
 import sound from '../Sound'
-
-interface IAppData {
-  row: number
-  col: number
-}
 
 const initialState = (): IAppState => {
   const squares = Array(19)
@@ -24,7 +20,7 @@ const initialState = (): IAppState => {
   }
 }
 
-const reducer = (state: IAppState = initialState(), action: ReduxActions.Action<IAppData>): IAppState => {
+const reducer = (state: IAppState = initialState(), action: ReduxActions.Action<IAppActionData>): IAppState => {
   switch (action.type) {
   case types.HIT_GOISHI: {
     // game end check
