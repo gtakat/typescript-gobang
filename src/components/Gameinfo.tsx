@@ -2,7 +2,7 @@ import * as React from 'react'
 import Goishi from './Goishi'
 
 export interface IGameinfoProps {
-  winner: string
+  winner: string|null
   current: string
 }
 

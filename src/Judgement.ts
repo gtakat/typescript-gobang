@@ -1,5 +1,7 @@
+import { IAppState } from './constants/StateTypes'
+
 class Judgement {
-  public validatesHit(state: any, row: number, col: number): boolean {
+  public validatesHit(state: IAppState, row: number, col: number): boolean {
     // Can not hit if it already exists
     if (this.existsGoishi(state, row, col)) {
       return false
@@ -106,18 +108,18 @@ class Judgement {
     return false
   }
 
-  private existsGoishi(state: any, row: number, col: number): boolean {
+  private existsGoishi(state: IAppState, row: number, col: number): boolean {
     return !!state.squares[row][col]
   }
 
-  private validFirstHit(state: any, row: number, col: number): boolean {
+  private validFirstHit(state: IAppState, row: number, col: number): boolean {
     if (state.step === 1) {
       return (row === 9 && col === 9)
     }
     return true
   }
 
-  private validSecondHit(state: any, row: number, col: number): boolean {
+  private validSecondHit(state: IAppState, row: number, col: number): boolean {
     if (state.step === 2) {
       const areas: any = {
         8:  [8, 9, 10],

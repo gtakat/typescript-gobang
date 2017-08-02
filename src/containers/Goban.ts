@@ -1,7 +1,8 @@
 import { connect } from 'react-redux'
 import { Goban } from '../components/Goban'
+import { IAppState } from '../constants/StateTypes'
 
-const mapStateToProps = (state: any): any => (state)
+const mapStateToProps = (state: IAppState): any => (state)
 
 const mapDispatchToProps = (dispatch: any): any => ({})
 
