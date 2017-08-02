@@ -2,15 +2,9 @@
 import * as Redux from 'redux'
 import * as ReduxActions from 'redux-actions'
 import * as types from '../constants/ActionTypes'
+import { IAppState } from '../constants/StateTypes'
 import judgement from '../Judgement'
 import sound from '../Sound'
-
-interface IAppState {
-  readonly current: string
-  readonly squares: Array<Array<string|null>>
-  readonly step: number
-  readonly winner: (string|null)
-}
 
 interface IAppData {
   row: number
