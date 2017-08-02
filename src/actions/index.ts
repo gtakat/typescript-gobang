@@ -1,11 +1,12 @@
-import * as types from '../constants/ActionTypes'
+import * as ReduxActions from 'redux-actions'
+import { HIT_GOISHI, IAppActionData } from '../constants/ActionTypes'
 
-export const hitGoishi = (row: number, col: number) => (
+export const hitGoishi = (row: number, col: number): ReduxActions.Action<IAppActionData> => (
   {
     payload: {
       col,
       row,
     },
-    type: types.HIT_GOISHI,
+    type: HIT_GOISHI,
   }
 )
