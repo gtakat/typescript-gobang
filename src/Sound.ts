@@ -1,8 +1,8 @@
 import { Howl } from 'howler'
 
 class Sound {
-  private soundBlack: any
-  private soundWhite: any
+  private soundBlack: Howl
+  private soundWhite: Howl
 
   public constructor() {
     this.soundBlack = new Howl({
