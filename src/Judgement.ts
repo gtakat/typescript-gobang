@@ -121,7 +121,7 @@ class Judgement {
 
   private validSecondHit(state: IAppState, row: number, col: number): boolean {
     if (state.step === 2) {
-      const areas: any = {
+      const areas: { [key: number]: number[] } = {
         8:  [8, 9, 10],
         9:  [8, 10],
         10: [8, 9, 10],
