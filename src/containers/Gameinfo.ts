@@ -1,4 +1,4 @@
-import { connect } from 'react-redux'
+import { connect, Dispatch } from 'react-redux'
 import { Gameinfo, IGameinfoProps } from '../components/Gameinfo'
 import { IAppState } from '../constants/StateTypes'
 
@@ -9,6 +9,6 @@ const mapStateToProps = (state: IAppState): IGameinfoProps => (
   }
 )
 
-const mapDispatchToProps = (dispatch: any): any => ({})
+// const mapDispatchToProps = (dispatch: Dispatch<IAppState>): any => ({})
 
-export default connect(mapStateToProps, mapDispatchToProps)(Gameinfo)
+export default connect(mapStateToProps)(Gameinfo)

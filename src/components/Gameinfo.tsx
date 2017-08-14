@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { IAppState } from '../constants/StateTypes'
 import Goishi from './Goishi'
 
 export interface IGameinfoProps {
@@ -6,7 +7,7 @@ export interface IGameinfoProps {
   current: string
 }
 
-export class Gameinfo extends React.Component<IGameinfoProps, {}> {
+export class Gameinfo extends React.Component<IGameinfoProps, IAppState> {
   public render(): JSX.Element {
     let informations: (JSX.Element|string) = ''
 

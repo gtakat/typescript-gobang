@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Gameinfo from '../containers/Gameinfo'
-import Goban from '../containers/Goban'
+import Goban from './Goban'
 
 const Game = (): JSX.Element => (
   <div id="App-game">
