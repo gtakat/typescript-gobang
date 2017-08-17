@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { IAppState } from '../constants/StateTypes'
+import { AppStateWinner, IAppState } from '../constants/StateTypes'
 import Goishi from './Goishi'
 
 export interface IGameinfoProps {
-  winner: string|null
+  winner: AppStateWinner
   current: string
 }
 
