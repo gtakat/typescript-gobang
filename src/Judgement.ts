@@ -1,4 +1,4 @@
-import { IAppState } from './constants/StateTypes'
+import { AppStateSquares, IAppState } from './constants/StateTypes'
 
 class Judgement {
   public validatesHit(state: IAppState, row: number, col: number): boolean {
@@ -20,7 +20,7 @@ class Judgement {
     return true
   }
 
-  public calculateWinner(squares: Array<Array<string|null>>, color: string, row: number, col: number): boolean {
+  public calculateWinner(squares: AppStateSquares, color: string, row: number, col: number): boolean {
     // horizontal and vertical line check
     let horizontalCount: number = 0
     let verticalCount: number = 0

@@ -1,6 +1,8 @@
+export type AppStateSquares = Array<Array<string|null>>
+
 export interface IAppState {
   readonly current: string
-  readonly squares: Array<Array<string|null>>
+  readonly squares: AppStateSquares
   readonly step: number
   readonly winner: string|null
 }

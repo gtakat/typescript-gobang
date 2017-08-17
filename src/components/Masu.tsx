@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { IAppState } from '../constants/StateTypes'
+import { AppStateSquares, IAppState } from '../constants/StateTypes'
 import Goishi from './Goishi'
 
 export interface IMasuProps {
-  squares: Array<Array<string|null>>
+  squares: AppStateSquares
   col: number
   row: number
 }
