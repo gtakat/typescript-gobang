@@ -9,6 +9,4 @@ const mapStateToProps = (state: IAppState): IGameinfoProps => (
   }
 )
 
-// const mapDispatchToProps = (dispatch: Dispatch<IAppState>): any => ({})
-
 export default connect(mapStateToProps)(Gameinfo)

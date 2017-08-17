@@ -4,7 +4,7 @@ import Masu from '../containers/Masu'
 
 export class Goban extends React.Component<{}, IAppState> {
   public render(): JSX.Element {
-    const squares: any[] = []
+    const squares: JSX.Element[] = []
 
     for (let i = 0; i < 19; i++) {
       for (let j = 0; j < 19; j++) {
