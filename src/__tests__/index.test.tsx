@@ -1,18 +1,19 @@
-import React from 'react'
+import * as React from 'react'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import { mount } from 'enzyme'
+import { mount, ReactWrapper } from 'enzyme'
 import { expect } from 'chai'
 import reducer from '../reducers/index'
 import App from '../components/App'
 import Goban from '../components/Goban'
+import store from '../reducers/index'
 
 describe('<Game>', () => {
-  const store = createStore(reducer)
+  // const store = createStore(reducer)
 
   describe('hit goishi', () => {
     let squares
-    let wrapper
+    let wrapper: ReactWrapper
 
     beforeAll(() => {
       squares = new Array(19)

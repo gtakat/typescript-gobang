@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 interface IGoishiProps {
-  color: string
+  color?: string
 }
 
 const Goishi = (props: IGoishiProps): (JSX.Element|null) => {

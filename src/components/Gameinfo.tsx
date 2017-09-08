@@ -3,8 +3,8 @@ import { AppStateWinner, IAppState } from '../constants/StateTypes'
 import Goishi from './Goishi'
 
 export interface IGameinfoProps {
-  winner: AppStateWinner
-  current: string
+  winner?: AppStateWinner
+  current?: string
 }
 
 export class Gameinfo extends React.Component<IGameinfoProps, IAppState> {

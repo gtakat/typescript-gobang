@@ -1,8 +1,12 @@
 import * as React from 'react'
-import { IAppState } from '../constants/StateTypes'
+import { AppStateSquares, IAppState } from '../constants/StateTypes'
 import Masu from '../containers/Masu'
 
-export class Goban extends React.Component<{}, IAppState> {
+interface IGobanProps {
+  squares?: AppStateSquares
+}
+
+export class Goban extends React.Component<IGobanProps, IAppState> {
   public render(): JSX.Element {
     const squares: JSX.Element[] = []
 

@@ -1,7 +1,7 @@
-import React from 'react'
+import * as React from 'react'
 import { shallow } from 'enzyme'
 import { expect } from 'chai'
-import Gameinfo from '../Gameinfo'
+import { Gameinfo} from '../Gameinfo'
 import Goishi from '../Goishi'
 
 describe('<Gameinfo> display winner', () => {

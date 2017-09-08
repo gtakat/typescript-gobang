@@ -1,11 +1,12 @@
-import React from 'react'
+import * as React from 'react'
 import { shallow } from 'enzyme'
 import { expect } from 'chai'
-import Masu from '../Masu'
+import Masu from '../../containers/Masu'
 import Goishi from '../Goishi'
+import { AppStateSquares } from '../../constants/StateTypes'
 
 describe('<Masu>', () => {
-  let squares = null
+  let squares: AppStateSquares = []
 
   beforeEach(() => {
     squares = Array(19)
@@ -16,18 +17,18 @@ describe('<Masu>', () => {
 
   it('render masu black', () => {
     squares[9][9] = 'black'
-    const wrapper = shallow(<Masu squares={squares} row="9" col="9" />)
+    const wrapper = shallow(<Masu squares={squares} row={9} col={9} />)
     expect(wrapper.contains(<Goishi color="black" />)).to.equal(true)
   })
 
   it('render masu white', () => {
     squares[9][9] = 'white'
-    const wrapper = shallow(<Masu squares={squares} row="9" col="9" />)
+    const wrapper = shallow(<Masu squares={squares} row={9} col={9} />)
     expect(wrapper.contains(<Goishi color="white" />)).to.equal(true)
   })
 
   it('render masu none', () => {
-    const wrapper = shallow(<Masu squares={squares} row="9" col="9" />)
-    expect(wrapper.find(<Goishi />).exists()).to.be.false
+    const wrapper = shallow(<Masu squares={squares} row={9} col={9} />)
+    expect(wrapper.find(<Goishi color="" />).exists()).to.be.false
   })
 })

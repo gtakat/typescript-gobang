@@ -9,6 +9,7 @@ export interface IMasuProps {
 }
 
 export interface IMasuOwnProps {
+  squares?: AppStateSquares  // for test props
   col: number
   row: number
 }

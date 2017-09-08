@@ -1,41 +1,46 @@
 import { expect } from 'chai'
 import judgement from '../Judgement'
+import { AppStateSquares, IAppState } from '../constants/StateTypes'
 
 describe('Judgement', () => {
-  let squares
+  let squares: AppStateSquares
+  let defaultState: IAppState
 
   beforeEach(() => {
     squares = Array(19)
     for (let i=0; i<squares.length; i++) {
       squares[i] = Array(19).fill(null)
     }
+
+    defaultState = {
+      current: 'black',
+      squares,
+      step: 1,
+      winner: null
+    }
   })
 
   describe('validatesHit', () => {
 
     it('Can hit if not exists', () => {
-      const state = {
-        squares
-      }
+      const state = Object.assign({}, defaultState, {
+        step: 3
+      })
       expect(judgement.validatesHit(state, 1, 2)).to.be.true
     })
 
     it('Can not hit if it already exists', () => {
       squares[1][2] = 'black'
-      const state = {
+      const state = Object.assign({}, defaultState, {
         squares
-      }
+      })
       expect(judgement.validatesHit(state, 1, 2)).to.be.false
     })
   })
 
   describe('first hit', () => {
-    let state
-    beforeEach(() => {
-      state = {
-        squares,
-        step: 1
-      }
+    const state = Object.assign({}, defaultState, {
+      step: 1
     })
 
     it('first hit is center only', () => {
@@ -48,13 +53,10 @@ describe('Judgement', () => {
   })
 
   describe('second hit', () => {
-    let state
-    beforeAll(() => {
-      squares[9][9] = 'black'
-      state = {
-        squares,
-        step: 2
-      }
+    squares[9][9] = 'black'
+    const state = Object.assign({}, defaultState, {
+      squares,
+      step: 1
     })
 
     it('second hit is around center', () => {
