@@ -39,8 +39,12 @@ describe('Judgement', () => {
   })
 
   describe('first hit', () => {
-    const state = Object.assign({}, defaultState, {
-      step: 1
+    let state: IAppState
+    
+    beforeEach(() => {
+      state = Object.assign({}, defaultState, {
+        step: 1
+      })
     })
 
     it('first hit is center only', () => {
@@ -53,10 +57,14 @@ describe('Judgement', () => {
   })
 
   describe('second hit', () => {
-    squares[9][9] = 'black'
-    const state = Object.assign({}, defaultState, {
-      squares,
-      step: 1
+    let state: IAppState
+
+    beforeEach(() => {
+      squares[9][9] = 'black'
+      state = Object.assign({}, defaultState, {
+        squares,
+        step: 1
+      })
     })
 
     it('second hit is around center', () => {
