@@ -63,7 +63,7 @@ describe('Judgement', () => {
       squares[9][9] = 'black'
       state = Object.assign({}, defaultState, {
         squares,
-        step: 1
+        step: 2
       })
     })
 

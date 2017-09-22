@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { shallow } from 'enzyme'
 import { expect } from 'chai'
-import { Masu } from '..//Masu'
+import { Masu } from '../Masu'
 import Goishi from '../Goishi'
 import { AppStateSquares } from '../../constants/StateTypes'
 
