@@ -13,15 +13,15 @@ use [create-react-app](https://github.com/facebookincubator/create-react-app)
 
 `git clone`
 
-`yarn install`
+`npm install`
 
-`yarn run start`
+`npm run start`
 
 access to http://localhost:3001/
 
 
 # Run test
-`yarn run coverage`
+`npm run coverage`
 
 
 # Credit
