@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/gtakat/typescript-gobang.svg?style=svg)](https://circleci.com/gh/gtakat/typescript-gobang)
+
 # redux-gobang
 
 redux application sample program.
